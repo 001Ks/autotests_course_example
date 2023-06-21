@@ -38,3 +38,4 @@ def test_zero():
 
 def test_more_two_int():
     assert all_division(56, 2, 4) == 7
+

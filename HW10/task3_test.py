@@ -12,6 +12,9 @@ def all_division(*arg1):
 
 
 @pytest.mark.parametrize('args, result', [pytest.param([25, 5], 5, marks=pytest.mark.smoke), ([56, 2, 4], 7),
-                                          pytest.param([0, 20], 0, marks=pytest.mark.skip(reason='wait to task №123'))])
+                                          pytest.param([0, 20], 0, marks=pytest.mark.skip(reason='wait to task №123')),
+                                          ([73.5, 2.5], 29.4), ([-44.4, 2], -22.2)])
+
+
 def test_int(args, result):
     assert all_division(*args) == result
